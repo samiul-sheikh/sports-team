@@ -7,6 +7,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import TeamDetails from "./Components/TeamDetails/TeamDetails";
 
 function App() {
     return (
@@ -17,6 +18,9 @@ function App() {
                 </Route>
                 <Route path="/home">
                     <Home />
+                </Route>
+                <Route path="/team/:idTeam">
+                    <TeamDetails />
                 </Route>
                 <Route path="*">
                     <NoMatch />
