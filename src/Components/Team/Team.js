@@ -1,8 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 const Team = (props) => {
 
-    const { strTeam, strSport, strTeamLogo } = props.team;
+    const { idTeam, strTeam, strSport, strTeamLogo } = props.team;
+
+    const history = useHistory();
+
+    const teamDetails = idTeam => {
+        const url = `/team/${idTeam}`;
+        history.push(url);
+    }
 
     return (
         <div>
@@ -10,7 +18,7 @@ const Team = (props) => {
             <img src={strTeamLogo} alt="" />
             <h1>{strTeam}</h1>
             <h3>Sports Type: {strSport}</h3>
-            <button>Explore</button>
+            <button onClick={() => teamDetails(idTeam)}>Explore</button>
         </div>
     );
 };
