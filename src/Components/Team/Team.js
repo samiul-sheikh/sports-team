@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Team = (props) => {
 
@@ -20,7 +22,7 @@ const Team = (props) => {
                 <Card.Body>
                     <Card.Title>{strTeam}</Card.Title>
                     <Card.Text>Sports Type: {strSport}</Card.Text>
-                    <Button onClick={() => teamDetails(idTeam)} variant="primary">Explore</Button>
+                    <Button onClick={() => teamDetails(idTeam)} variant="primary">Explore Team <FontAwesomeIcon icon={faArrowCircleRight} /></Button>
                 </Card.Body>
             </Card>
         </div>

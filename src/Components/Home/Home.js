@@ -1,8 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import Team from '../Team/Team';
+import background from '../../images/background/background.jpg'
 
 const Home = () => {
 
@@ -16,6 +17,13 @@ const Home = () => {
 
     return (
         <div>
+            <Card className="text-center text-white">
+                <Card.Img src={background} alt="Card image" style={{height:'300px', width:'100%'}} />
+                <Card.ImgOverlay>
+                    <h1>Sports Team</h1>
+                </Card.ImgOverlay>
+            </Card>
+
             <Container>
                 <div className="row">
                     {

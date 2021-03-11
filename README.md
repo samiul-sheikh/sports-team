@@ -2,9 +2,10 @@
 
 ### `Project Feature`
 
-1. From this website users can preview their favorite team information. \
-2. There are various types of sports teams (football, cricket, soccer etc.) \
+1. From this website users can preview their favorite team information.
+2. There are various types of sports teams (football, cricket, soccer etc.)
 3. Users can view teams official website via click icon.
+4. Responsive for web and mobile devices.
 
 ### `Live Project`
 
