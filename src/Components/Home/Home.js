@@ -16,8 +16,6 @@ const Home = () => {
 
     return (
         <div>
-            <h2>This is Homepage</h2>
-            <h3>Total Teams : {teams.length}</h3>
             <Container>
                 <div className="row">
                     {

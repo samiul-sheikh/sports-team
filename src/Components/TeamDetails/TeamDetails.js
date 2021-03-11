@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import SocialSite from '../SocialSite/SocialSite';
+import male from '../../images/player/male.png';
+import female from '../../images/player/female.png';
 
 const TeamDetails = () => {
     const { idTeam } = useParams()
@@ -20,17 +22,22 @@ const TeamDetails = () => {
 
     return (
         <div>
-            <h3>Team Details</h3>
             <Container>
                 <img src={strTeamBanner} alt="" />
-                <div>
-                    <h1>{strTeam}</h1>
-                    <p>Founded:{intFormedYear}</p>
-                    <p>Country:{strCountry}</p>
-                    <p>Sport Type:{strSport}</p>
-                    <p>Gender:{strGender}</p>
+                <div style={{ display: 'flex' }}>
+                    <div>
+                        <h1>{strTeam}</h1>
+                        <p>Founded:{intFormedYear}</p>
+                        <p>Country:{strCountry}</p>
+                        <p>Sport Type:{strSport}</p>
+                        <p>Gender:{strGender}</p>
+                    </div>
+                    <div>
+                        {team.strGender === male ? <img src={female} /> : <img src={male} style={{ height: '200px', width: '200px' }} />}
+                    </div>
                 </div>
-                <p>Description:{strDescriptionEN}</p>
+
+                <p>{strDescriptionEN}</p>
                 <div className="text-center">
                     <SocialSite></SocialSite>
                 </div>
