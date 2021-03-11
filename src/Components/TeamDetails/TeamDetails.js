@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
+import SocialSite from '../SocialSite/SocialSite';
 
 const TeamDetails = () => {
     const { idTeam } = useParams()
@@ -27,6 +28,7 @@ const TeamDetails = () => {
             <p>Sport Type:{strSport}</p>
             <p>Gender:{strGender}</p>
             <p>Description:{strDescriptionEN}</p>
+            <SocialSite></SocialSite>
 
         </div>
     );
