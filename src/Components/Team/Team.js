@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
 const Team = (props) => {
@@ -13,12 +14,15 @@ const Team = (props) => {
     }
 
     return (
-        <div>
-            <h2>This is Team information</h2>
-            <img src={strTeamLogo} alt="" />
-            <h1>{strTeam}</h1>
-            <h3>Sports Type: {strSport}</h3>
-            <button onClick={() => teamDetails(idTeam)}>Explore</button>
+        <div className="col-md-4">
+            <Card className="text-center" style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={strTeamLogo} />
+                <Card.Body>
+                    <Card.Title>{strTeam}</Card.Title>
+                    <Card.Text>Sports Type: {strSport}</Card.Text>
+                    <Button onClick={() => teamDetails(idTeam)} variant="primary">Explore</Button>
+                </Card.Body>
+            </Card>
         </div>
     );
 };
